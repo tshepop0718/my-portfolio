@@ -331,6 +331,32 @@ footer {
   font-size: 0.9rem;
 }
 
+.stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:40px;
+}
+
+.stats div{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:20px;
+    min-width:170px;
+    border-radius:14px;
+}
+
+.stats h3{
+    font-size:1.8rem;
+    color:var(--primary);
+    margin-bottom:5px;
+}
+
+.stats p{
+    margin:0;
+}
+
+
 @media (max-width: 600px) {
   .hero {
     padding-top: 75px;
@@ -342,195 +368,299 @@ footer {
 
 <body>
 
-	<header class="hero">
-  <p class="hero-label">COMPUTER SYSTEMS ENGINEERING</p>
+<header class="hero">
+    <p class="hero-label">
+        COMPUTER SYSTEMS ENGINEERING STUDENT
+    </p>
 
-  <h1>
-    Hi, I'm Tshepo.<br />
-    <span>Aspiring CSE Professional.</span>
-  </h1>
+    <h1>
+        Tshepo Makhubela<br>
+        <span>Building Technology Solutions For The Future</span>
+    </h1>
 
-  <p class="hero-description">
-    I'm a first-year Computer Systems Engineering student
-    interested in programming, computer systems, and networking.
-    I'm building my technical skills and seeking internship
-    opportunities to gain practical experience.
-  </p>
+    <p class="hero-description">
+        Computer Systems Engineering student at Tshwane University of Technology
+        with a growing foundation in programming, networking, web development,
+        and computer systems. Passionate about technology, problem-solving,
+        continuous learning, and creating practical solutions through software
+        and engineering.
+    </p>
 
-  <div class="hero-buttons">
-    <a class="button" href="#projects">View My Projects</a>
+    <div class="hero-buttons">
+        <a href="#projects" class="button">View Projects</a>
 
-    <a class="button button-secondary" href="#contact">
-      Contact Me
-    </a>
-  </div>
+        <a href="https://www.linkedin.com/in/tshepo-makhubela/"
+            target="_blank"
+            class="button button-secondary">
+            LinkedIn Profile
+        </a>
 
-  <p class="hero-note">
-    C++ · Networking · Web Development
-  </p>
+        <a href="#contact"
+           class="button button-secondary">
+           Contact Me
+        </a>
+    </div>
+
+    <div class="stats">
+        <div>
+            <h3>1+</h3>
+            <p>Projects Built</p>
+        </div>
+
+        <div>
+            <h3>6 Months</h3>
+            <p>Professional Experience</p>
+        </div>
+
+        <div>
+            <h3>CSE</h3>
+            <p>Engineering Student</p>
+        </div>
+    </div>
 </header>
 
-	
 <nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-	<main>
+<main>
 
-		<!-- ABOUT ME -->
 <section id="about">
-  <p class="hero-label">GET TO KNOW ME</p>
-  <h2>About Me</h2>
+    <p class="hero-label">PROFESSIONAL PROFILE</p>
 
-  <p>
-    I'm a first-year Computer Systems Engineering student
-    with an interest in programming, computer systems, and
-    networking. I'm developing my technical knowledge through
-    my studies and practical projects.
-  </p>
+    <h2>About Me</h2>
 
-  <p>
-    My experience as a Teacher's Assistant at a high school
-    helped me develop communication, teamwork, organisation,
-    and problem-solving skills.
-  </p>
+    <p>
+        I am a Computer Systems Engineering student at
+        Tshwane University of Technology, dedicated to building
+        a strong foundation in software development, networking,
+        computer systems, and emerging technologies.
+    </p>
 
-  <p>
-    I'm looking for internship opportunities where I can
-    apply what I'm learning, gain practical experience,
-    and grow as a future engineering professional.
-  </p>
+    <p>
+        My academic journey has strengthened my analytical thinking,
+        technical problem-solving abilities, and passion for engineering.
+        Through coursework and personal projects, I continuously develop
+        practical technical skills while exploring modern technology
+        solutions.
+    </p>
+
+    <p>
+        In addition to my technical development, I gained valuable
+        workplace experience as a Teacher's Assistant, where I developed
+        communication, teamwork, organisational, leadership, and
+        time-management skills.
+    </p>
+
+    <p>
+        My goal is to secure internship opportunities where I can apply
+        my skills, contribute to real-world projects, learn from industry
+        professionals, and continue growing as a future systems engineer.
+    </p>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
-  <h2>Education</h2>
+    <h2>Education</h2>
 
-  <div class="project">
-    <h3>Diploma in Computer Systems Engineering</h3>
+    <div class="project">
 
-    <p><strong>Institution:</strong>
-      Tshwane University of Technology
-    </p>
+        <h3>Diploma in Computer Systems Engineering</h3>
 
-    <p><strong>Study level:</strong> First-year student</p>
+        <p>
+            <strong>Institution:</strong> Tshwane University of Technology
+        </p>
 
-    <p>
-      Developing a foundation in computer systems, programming,
-      and networking while building practical technical skills.
-    </p>
-  </div>
+        <p>
+            <strong>Status:</strong> Current Student
+        </p>
+
+        <p>
+            Developing knowledge in programming, networking,
+            computer systems, software development, and engineering
+            principles through academic coursework and practical projects.
+        </p>
+
+        <p>
+            <strong>Areas of Focus:</strong><br>
+            Programming • Networking • Computer Systems •
+            Software Development • Problem Solving
+        </p>
+
+    </div>
 </section>
 
-<!-- TECHNICAL SKILLS -->
 <section id="skills">
-  <h2>Technical Skills</h2>
 
-  <p>
-    These are the programming and technical areas I am currently
-    learning and developing.
-  </p>
+    <h2>Technical & Professional Skills</h2>
 
-  <div class="skills">
-    <span>C++ Programming</span>
-    <span>Arrays in C++</span>
-    <span>Object-Oriented Programming (OOP)</span>
-    <span>Networking Fundamentals</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>Git and GitHub</span>
-    <span>Problem-Solving</span>
-  </div>
+    <p>
+        A growing collection of technical and professional skills
+        developed through education, projects, and workplace experience.
+    </p>
+
+    <div class="skills">
+
+        <span>C++ Programming</span>
+        <span>Object-Oriented Programming</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Responsive Web Design</span>
+        <span>Networking Fundamentals</span>
+        <span>Computer Systems</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Problem Solving</span>
+        <span>Communication</span>
+        <span>Teamwork</span>
+        <span>Organisation</span>
+        <span>Time Management</span>
+
+    </div>
+
 </section>
 
-		<section id="experience">
-			<h2>Experience</h2>
-			<h3>Teaching Assistant</h3>
-			<p>Secondary school | Six(6)-month contract</p>
-			<P> Assisted teachers with daily classroom activities and learning materials. Supported learners in understanding instructions and completing assigned tasks. Helped maintain an organized, positive, and productive learning environment. Communicated with learners and teachers to support effective classroom activities. Developed strong teamwork, communication, organization, time-management, and problem-solving skills. Demonstrated responsibility, patience, adaptability, and professionalism in an educational environment.</p>
-		</section>
+<section id="experience">
 
-		<!-- PROJECTS -->
+    <h2>Professional Experience</h2>
+
+    <div class="project">
+
+        <h3>Teacher's Assistant</h3>
+
+        <p>
+            <strong>Mphambo Secondary School</strong>
+        </p>
+
+        <p>
+            Six-Month Contract
+        </p>
+
+        <p>
+            Supported teaching and learning activities while assisting
+            learners and educators in maintaining an organised and
+            productive educational environment.
+        </p>
+
+        <ul style="padding-left:20px;color:var(--muted);">
+            <li>Assisted teachers with classroom administration and learning activities.</li>
+            <li>Supported learners with instructions and educational tasks.</li>
+            <li>Maintained a positive and productive learning environment.</li>
+            <li>Strengthened communication and teamwork abilities.</li>
+            <li>Developed organisational, leadership, and problem-solving skills.</li>
+            <li>Demonstrated professionalism, responsibility, and adaptability.</li>
+        </ul>
+
+    </div>
+
+</section>
+
 <section id="projects">
-  <h2>My Projects</h2>
 
-  <p>
-    Here are projects I am building as I develop my
-    programming and web development skills.
-  </p>
-
-  <div class="project">
-    <h3>Personal Portfolio Website</h3>
+    <h2>Featured Projects</h2>
 
     <p>
-      I designed and built a personal portfolio website to
-      introduce myself, showcase my technical skills, present
-      my education and experience, and provide contact links.
+        Practical projects that demonstrate my growth in web development,
+        programming, and technology.
     </p>
 
-    <p>
-      <strong>Technologies:</strong>
-      HTML, CSS, GitHub, GitHub Pages
-    </p>
+    <div class="project">
 
-    <p>
-      <strong>Key learning:</strong>
-      Structuring web pages with HTML, styling layouts with
-      CSS, using GitHub to store website files, and publishing
-      a website online with GitHub Pages.
-    </p>
+        <h3>Professional Portfolio Website</h3>
 
-    <p>
-      <strong>Status:</strong> Published
-    </p>
+        <p>
+            Designed and developed a responsive personal portfolio website
+            to showcase my education, skills, professional background,
+            technical interests, and projects.
+        </p>
 
-    <a
-      class="button"
-      href="https://tshepop0718.github.io/my-cse-portfolio/"
-      target="_blank"
-      rel="noopener noreferrer">
-      View Live Website
-    </a>
+        <p>
+            <strong>Technologies:</strong>
+            HTML5, CSS3, GitHub, GitHub Pages
+        </p>
 
-    <a
-      class="button"
-      href="https://github.com/tshepop0718/my-cse-portfolio"
-      target="_blank"
-      rel="noopener noreferrer">
-      View Source Code
-    </a>
-  </div>
+        <p>
+            <strong>Key Achievements:</strong>
+        </p>
+
+        <ul style="padding-left:20px;color:var(--muted);">
+            <li>Created a fully responsive website.</li>
+            <li>Implemented modern UI and professional styling.</li>
+            <li>Published the website using GitHub Pages.</li>
+            <li>Applied version control using Git and GitHub.</li>
+        </ul>
+
+        <p>
+            <strong>Status:</strong> Live & Continuously Improving
+        </p>
+
+        <a
+            class="button"
+            href="https://tshepop0718.github.io/my-cse-portfolio/"
+            target="_blank">
+            Live Website
+        </a>
+
+        <a
+            class="button"
+            href="https://github.com/tshepop0718/my-cse-portfolio"
+            target="_blank">
+            Source Code
+        </a>
+
+    </div>
+
 </section>
 
-	</main>
+</main>
+
 <section id="contact">
-  <h2>Contact Me</h2>
-  <p>
-    I am building my skills in Computer Systems Engineering
-    and looking forward to internship opportunities.
-  </p>
 
-  <a class="button"
-     href="https://www.linkedin.com/in/tshepo-makhubela/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Visit My LinkedIn
-  </a>
+    <h2>Let's Connect</h2>
 
-  <a class="button"
-     href="mailto:tshepop071@gmail.com">
-    Email Me
-  </a>
+    <p>
+        I am currently seeking opportunities to gain practical experience,
+        collaborate with professionals, and further develop my skills in
+        Computer Systems Engineering.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a
+            class="button"
+            href="mailto:tshepop071@gmail.com">
+            Email Me
+        </a>
+
+        <a
+            class="button button-secondary"
+            href="https://www.linkedin.com/in/tshepo-makhubela/"
+            target="_blank">
+            LinkedIn
+        </a>
+
+        <a
+            class="button button-secondary"
+            href="https://github.com/tshepop0718"
+            target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
 </section>
 
-	<footer>
-		<p>My Portfolio | Computer Systems Engineering</p>
-	</footer>
+<footer>
+    <p>
+        © 2026 Tshepo Makhubela |
+        Computer Systems Engineering Student |
+        Tshwane University of Technology
+    </p>
+</footer>
 
 </body>
 </html>

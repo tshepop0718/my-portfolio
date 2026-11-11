@@ -29,7 +29,7 @@ Technologies used:
 Connect With Me
 
 - LinkedIn: https://www.linkedin.com/in/tshepo-makhubela/
-- Portfolio: https://tshepop0718.github.io/my-cse-portfolio/
+- Portfolio: https://tshepop0718.github.io/my-portfolio/
 
 ---
 

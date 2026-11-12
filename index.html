@@ -1,666 +1,1014 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My CSE Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
 
-	<style>
- /* =========================
-   1. GLOBAL STYLES
-========================= */
+  <meta name="description" content="Tshepo Makhubela - Computer Systems Engineering student at Tshwane University of Technology. Explore my skills, experience and projects.">
 
-:root {
-  --background: #0b1120;
-  --surface: #111b2e;
-  --surface-hover: #17243b;
-  --primary: #60a5fa;
-  --primary-hover: #93c5fd;
-  --text: #f1f5f9;
-  --muted: #a3b2c7;
-  --border: #263650;
-}
+  <meta property="og:title" content="Tshepo Makhubela | CSE Portfolio">
+  <meta property="og:description" content="Computer Systems Engineering student passionate about software development, networking and technology.">
+  <meta property="og:type" content="website">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <title>Tshepo Peter | CSE Portfolio</title>
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--background);
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 16px;
-}
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* =========================
-   2. NAVIGATION
-========================= */
+  <style>
+    :root {
+      --bg: #080d18;
+      --surface: #101827;
+      --surface2: #142036;
+      --blue: #4f8cff;
+      --blue-light: #8ab4ff;
+      --text: #f1f5ff;
+      --muted: #9ba9bd;
+      --border: #25334a;
+    }
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 28px;
-  padding: 18px 24px;
-  background: rgba(11, 17, 32, 0.92);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
-nav a:hover,
-nav a:focus-visible {
-  color: var(--primary);
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
 
-/* =========================
-   3. PAGE LAYOUT
-========================= */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-section {
-  width: min(100% - 40px, 1000px);
-  margin: 0 auto;
-  padding: 76px 0;
-  border-bottom: 1px solid var(--border);
-}
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-section h2 {
-  margin-bottom: 24px;
-  font-size: clamp(1.7rem, 4vw, 2.2rem);
-  line-height: 1.25;
-  letter-spacing: -0.5px;
-}
+    a:focus-visible {
+      outline: 2px solid var(--blue-light);
+      outline-offset: 4px;
+    }
 
-section p {
-  color: var(--muted);
-  margin-bottom: 16px;
-}
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
 
-/* =========================
-   4. INTRODUCTION / HERO
-========================= */
+    /* NAVIGATION */
 
-header {
-  width: min(100% - 40px, 1000px);
-  margin: 0 auto;
-  padding: 100px 0 90px;
-}
+    header {
+      background: #080d18;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-header h1 {
-  max-width: 800px;
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin-bottom: 24px;
-}
+    nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-header p {
-  max-width: 680px;
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 18px;
-}
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
 
-header strong {
-  color: var(--primary);
-}
+    .logo span {
+      color: var(--blue);
+    }
 
-/* =========================
-   5. SKILLS
-========================= */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      align-items: center;
+    }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
+    .nav-links a {
+      color: var(--muted);
+      font-size: .88rem;
+    }
 
-.skills span {
-  display: inline-block;
-  padding: 9px 15px;
-  color: #bfdbfe;
-  background: rgba(96, 165, 250, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.25);
-  border-radius: 8px;
-  font-size: 0.92rem;
-}
+    .nav-links a:hover {
+      color: var(--blue-light);
+    }
 
-/* =========================
-   6. PROJECT CARDS
-========================= */
+    .nav-links .contact-link {
+      color: var(--blue-light);
+      border: 1px solid var(--blue);
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
 
-.project {
-  margin-top: 24px;
-  padding: 28px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
+    /* HERO */
 
-.project:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-  background: var(--surface-hover);
-}
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 85% 25%, rgba(79,140,255,.14), transparent 45%),
+        var(--bg);
+      padding: 90px 0;
+    }
 
-.project h3 {
-  margin-bottom: 14px;
-  font-size: 1.35rem;
-  line-height: 1.4;
-}
+    .hero-content {
+      max-width: 780px;
+    }
 
-.project p {
-  margin-bottom: 14px;
-}
+    .availability {
+      display: inline-block;
+      border: 1px solid rgba(79,140,255,.35);
+      background: rgba(79,140,255,.09);
+      color: var(--blue-light);
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: .82rem;
+      margin-bottom: 28px;
+    }
 
-.project strong {
-  color: var(--text);
-}
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
 
-/* =========================
-   7. BUTTONS AND LINKS
-========================= */
+    .hero h1 span {
+      color: var(--blue);
+    }
 
-.button {
-  display: inline-block;
-  margin: 8px 8px 0 0;
-  padding: 11px 19px;
-  color: #08111f;
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  border-radius: 8px;
-  font-weight: 650;
-  font-size: 0.94rem;
-  text-decoration: none;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
+    .hero h2 {
+      color: #d0d9e9;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
 
-.button:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-}
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
 
-a:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 4px;
-}
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
 
-/* =========================
-   8. CONTACT AND FOOTER
-========================= */
+    .btn {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: .9rem;
+      border: 1px solid var(--blue);
+      text-align: center;
+    }
 
-#contact a:not(.button) {
-  color: var(--primary);
-  text-decoration: none;
-}
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
 
-#contact a:not(.button):hover {
-  text-decoration: underline;
-}
+    .btn-outline {
+      color: var(--blue-light);
+    }
 
-footer {
-  padding: 28px 20px;
-  color: var(--muted);
-  text-align: center;
-  font-size: 0.9rem;
-}
+    /* SECTION DEFAULTS */
 
-/* =========================
-   9. MOBILE RESPONSIVENESS
-========================= */
+    section {
+      padding: 85px 0;
+    }
 
-@media (max-width: 600px) {
-  nav {
-    gap: 10px 16px;
-    padding: 15px 12px;
-  }
+    .section-heading {
+      margin-bottom: 38px;
+    }
 
-  nav a {
-    font-size: 0.88rem;
-  }
+    .section-heading small {
+      color: var(--blue);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
 
-  header {
-    padding: 72px 0 60px;
-  }
+    .section-heading h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      margin-top: 8px;
+    }
 
-  header h1 {
-    letter-spacing: -1px;
-  }
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 9px;
+    }
 
-  section {
-    width: calc(100% - 32px);
-    padding: 55px 0;
-  }
+    /* ABOUT */
 
-  .project {
-    padding: 21px;
-  }
+    .about {
+      background: #0b1220;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
 
-  .button {
-    padding: 10px 14px;
-  }
-}
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 40px;
+    }
 
-/* =========================
-   10. REDUCED MOTION
-========================= */
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+    .about-card {
+      padding: 25px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-}
-/* MODERN HERO SECTION */
+    .about-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 15px;
+    }
 
-.hero {
-  padding-top: 110px;
-  padding-bottom: 100px;
-}
+    .info {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-.hero-label {
-  color: var(--primary);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 22px;
-}
+    .info:last-child {
+      border: none;
+    }
 
-.hero h1 span {
-  color: var(--primary);
-}
+    .info small {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+    }
 
-.hero-description {
-  max-width: 650px;
-}
+    .info strong {
+      font-size: .9rem;
+    }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
+    /* SKILLS */
 
-.hero-buttons .button {
-  margin: 0;
-}
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-.button-secondary {
-  color: var(--text);
-  background: transparent;
-  border-color: var(--border);
-}
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 11px;
+    }
 
-.button-secondary:hover {
-  color: var(--primary);
-  background: var(--surface);
-}
+    .skill-number {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 700;
+    }
 
-.hero-note {
-  margin-top: 28px;
-  font-size: 0.9rem;
-}
+    .skill-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin: 13px 0;
+    }
 
-.stats{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    margin-top:40px;
-}
+    .skill-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
 
-.stats div{
-    background:var(--surface);
-    border:1px solid var(--border);
-    padding:20px;
-    min-width:170px;
-    border-radius:14px;
-}
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
 
-.stats h3{
-    font-size:1.8rem;
-    color:var(--primary);
-    margin-bottom:5px;
-}
+    .tag {
+      background: var(--surface2);
+      color: var(--blue-light);
+      border: 1px solid var(--border);
+      padding: 5px 11px;
+      font-size: .78rem;
+      border-radius: 5px;
+    }
 
-.stats p{
-    margin:0;
-}
+    /* PROJECTS */
 
+    .projects {
+      background: #0b1220;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
 
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 75px;
-    padding-bottom: 65px;
-  }
-}
-</style>
+    .project-card {
+      max-width: 650px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .project-banner {
+      min-height: 175px;
+      background: linear-gradient(135deg, #142a4c, #101827);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--blue-light);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .project-body {
+      padding: 27px;
+    }
+
+    .project-body h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 23px;
+    }
+
+    .project-links a {
+      color: var(--blue-light);
+      font-size: .88rem;
+      font-weight: 600;
+    }
+
+    .project-links a:hover {
+      color: white;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      border-left: 2px solid var(--border);
+      margin-left: 10px;
+      padding-left: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 35px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      background: var(--blue);
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+    }
+
+    .timeline-meta {
+      color: var(--blue-light);
+      font-size: .86rem;
+      margin: 5px 0 12px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(79,140,255,.12), transparent 65%),
+        #0b1220;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-content {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-content p {
+      color: var(--muted);
+      margin: 15px 0 28px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--blue-light);
+      padding: 10px 19px;
+      border-radius: 7px;
+      font-size: .9rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    footer span {
+      color: var(--blue-light);
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 850px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+    }
+
+    @media(max-width: 600px) {
+      nav {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+      }
+
+      .nav-links a {
+        font-size: .78rem;
+      }
+
+      .nav-links .contact-link {
+        display: none;
+      }
+
+      .hero {
+        min-height: 490px;
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: .95rem;
+      }
+
+      .buttons .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-body {
+        padding: 21px;
+      }
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero">
-    <p class="hero-label">
-        COMPUTER SYSTEMS ENGINEERING STUDENT
-    </p>
+  <!-- NAVIGATION -->
 
-    <h1>
-        Tshepo Makhubela<br>
-        <span>Building Technology Solutions For The Future</span>
-    </h1>
+  <header>
+    <nav class="container">
 
-    <p class="hero-description">
-        Computer Systems Engineering student at Tshwane University of Technology
-        with a growing foundation in programming, networking, web development,
-        and computer systems. Passionate about technology, problem-solving,
-        continuous learning, and creating practical solutions through software
-        and engineering.
-    </p>
+      <a href="#home" class="logo">
+        TP<span>.</span>
+      </a>
 
-    <div class="hero-buttons">
-        <a href="#projects" class="button">View Projects</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="contact-link">Contact</a></li>
+      </ul>
 
-        <a href="https://www.linkedin.com/in/tshepo-makhubela/"
-            target="_blank"
-            class="button button-secondary">
-            LinkedIn Profile
-        </a>
+    </nav>
+  </header>
 
-        <a href="#contact"
-           class="button button-secondary">
-           Contact Me
-        </a>
-    </div>
+  <main>
 
-    <div class="stats">
-        <div>
-            <h3>1+</h3>
-            <p>Projects Built</p>
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="availability">
+            Computer Systems Engineering Student
+          </span>
+
+          <h1>
+            Hello, I'm <span>Tshepo Makhubela.</span>
+          </h1>
+
+          <h2>
+            Aspiring Software Developer & Technology Enthusiast
+          </h2>
+
+          <p>
+            I am a Computer Systems Engineering student at
+            Tshwane University of Technology, passionate about
+            programming, computer systems and networking.
+            I enjoy learning new technologies, developing
+            practical skills and exploring solutions to
+            real-world problems.
+          </p>
+
+          <div class="buttons">
+
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Get In Touch
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Get To Know Me</small>
+          <h2>About Me</h2>
         </div>
 
-        <div>
-            <h3>6 Months</h3>
-            <p>Professional Experience</p>
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <p>
+              I am a Computer Systems Engineering student
+              at Tshwane University of Technology (TUT),
+              working towards building a strong foundation
+              in software development and computer technology.
+            </p>
+
+            <p>
+              My technical interests include C++ programming,
+              object-oriented programming, computer networking
+              and understanding how computer systems operate.
+            </p>
+
+            <p>
+              I value continuous learning, critical thinking
+              and practical experience. I am particularly
+              interested in opportunities where I can apply
+              my knowledge, collaborate with others and learn
+              from experienced professionals.
+            </p>
+
+            <p>
+              My current goal is to gain industry experience
+              through an internship and continue developing
+              into a skilled technology professional.
+            </p>
+
+          </div>
+
+          <div class="about-card">
+
+            <h3>Quick Information</h3>
+
+            <div class="info">
+              <small>Name</small>
+              <strong>Tshepo Makhubela</strong>
+            </div>
+
+            <div class="info">
+              <small>Field of Study</small>
+              <strong>Computer Systems Engineering</strong>
+            </div>
+
+            <div class="info">
+              <small>Institution</small>
+              <strong>Tshwane University of Technology</strong>
+            </div>
+
+            <div class="info">
+              <small>Interests</small>
+              <strong>Software Development & Networking</strong>
+            </div>
+
+            <div class="info">
+              <small>Career Objective</small>
+              <strong>Software / IT Internship</strong>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>What I Work With</small>
+          <h2>Technical Skills</h2>
+          <p>
+            Technologies and concepts I am currently
+            developing my knowledge and practical
+            understanding of.
+          </p>
         </div>
 
-        <div>
-            <h3>CSE</h3>
-            <p>Engineering Student</p>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+
+            <span class="skill-number">01 / PROGRAMMING</span>
+
+            <h3>C++ Programming</h3>
+
+            <p>
+              Building programming fundamentals and
+              developing logical problem-solving skills.
+            </p>
+
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">Arrays</span>
+              <span class="tag">OOP</span>
+            </div>
+
+          </div>
+
+          <div class="skill-card">
+
+            <span class="skill-number">02 / TECHNOLOGY</span>
+
+            <h3>Computer Networking</h3>
+
+            <p>
+              Developing an understanding of networking
+              principles and communication between
+              computer systems.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Networking</span>
+              <span class="tag">Network Fundamentals</span>
+            </div>
+
+          </div>
+
+          <div class="skill-card">
+
+            <span class="skill-number">03 / PROFESSIONAL</span>
+
+            <h3>Professional Skills</h3>
+
+            <p>
+              Developing the interpersonal and
+              organisational abilities needed in
+              professional environments.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Communication</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Problem-solving</span>
+              <span class="tag">Adaptability</span>
+            </div>
+
+          </div>
+
         </div>
-    </div>
-</header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+      </div>
 
-<main>
+    </section>
 
-<section id="about">
-    <p class="hero-label">PROFESSIONAL PROFILE</p>
+    <!-- PROJECTS SECTION -->
 
-    <h2>About Me</h2>
+    <section class="projects" id="projects">
 
-    <p>
-        I am a Computer Systems Engineering student at
-        Tshwane University of Technology, dedicated to building
-        a strong foundation in software development, networking,
-        computer systems, and emerging technologies.
-    </p>
+      <div class="container">
 
-    <p>
-        My academic journey has strengthened my analytical thinking,
-        technical problem-solving abilities, and passion for engineering.
-        Through coursework and personal projects, I continuously develop
-        practical technical skills while exploring modern technology
-        solutions.
-    </p>
+        <div class="section-heading">
+          <small>My Work</small>
+          <h2>Featured Project</h2>
+          <p>
+            A look at my practical work and personal
+            development as an aspiring developer.
+          </p>
+        </div>
 
-    <p>
-        In addition to my technical development, I gained valuable
-        workplace experience as a Teacher's Assistant, where I developed
-        communication, teamwork, organisational, leadership, and
-        time-management skills.
-    </p>
+        <article class="project-card">
 
-    <p>
-        My goal is to secure internship opportunities where I can apply
-        my skills, contribute to real-world projects, learn from industry
-        professionals, and continue growing as a future systems engineer.
-    </p>
-</section>
+          <div class="project-banner">
+            &lt;/&gt;
+          </div>
 
-<section id="education">
-    <h2>Education</h2>
+          <div class="project-body">
 
-    <div class="project">
+            <h3>Personal Portfolio Website</h3>
 
-        <h3>Diploma in Computer Systems Engineering</h3>
+            <p>
+              A personal portfolio website developed
+              to establish my online professional presence.
+              The website introduces my background,
+              highlights my technical interests,
+              showcases my work and provides a platform
+              for professional networking.
+            </p>
 
-        <p>
-            <strong>Institution:</strong> Tshwane University of Technology
-        </p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
 
-        <p>
-            <strong>Status:</strong> Current Student
-        </p>
+            <div class="project-links">
 
-        <p>
-            Developing knowledge in programming, networking,
-            computer systems, software development, and engineering
-            principles through academic coursework and practical projects.
-        </p>
+              <a href="https://tshepop0718.github.io/my-portfolio/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Live Website ↗
+              </a>
 
-        <p>
-            <strong>Areas of Focus:</strong><br>
-            Programming • Networking • Computer Systems •
-            Software Development • Problem Solving
-        </p>
+              <a href="https://github.com/tshepop0718/my-portfolio"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Source Code ↗
+              </a>
 
-    </div>
-</section>
+            </div>
 
-<section id="skills">
+          </div>
 
-    <h2>Technical & Professional Skills</h2>
+        </article>
 
-    <p>
-        A growing collection of technical and professional skills
-        developed through education, projects, and workplace experience.
-    </p>
+      </div>
 
-    <div class="skills">
+    </section>
 
-        <span>C++ Programming</span>
-        <span>Object-Oriented Programming</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Responsive Web Design</span>
-        <span>Networking Fundamentals</span>
-        <span>Computer Systems</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Problem Solving</span>
-        <span>Communication</span>
-        <span>Teamwork</span>
-        <span>Organisation</span>
-        <span>Time Management</span>
+    <!-- EDUCATION SECTION -->
 
-    </div>
+    <section id="education">
 
-</section>
+      <div class="container">
 
-<section id="experience">
+        <div class="section-heading">
+          <small>Academic Background</small>
+          <h2>Education</h2>
+        </div>
 
-    <h2>Professional Experience</h2>
+        <div class="timeline">
 
-    <div class="project">
+          <div class="timeline-item">
 
-        <h3>Teacher's Assistant</h3>
+            <h3>Diploma in Computer Systems Engineering</h3>
 
-        <p>
-            <strong>Mphambo Secondary School</strong>
-        </p>
+            <div class="timeline-meta">
+              Tshwane University of Technology (TUT)
+            </div>
 
-        <p>
-            Six-Month Contract
-        </p>
+            <p>
+              Currently pursuing a Diploma in Computer
+              Systems Engineering, developing foundational
+              knowledge in programming, computer systems,
+              networking and related technologies.
+            </p>
 
-        <p>
-            Supported teaching and learning activities while assisting
-            learners and educators in maintaining an organised and
-            productive educational environment.
-        </p>
+          </div>
 
-        <ul style="padding-left:20px;color:var(--muted);">
-            <li>Assisted teachers with classroom administration and learning activities.</li>
-            <li>Supported learners with instructions and educational tasks.</li>
-            <li>Maintained a positive and productive learning environment.</li>
-            <li>Strengthened communication and teamwork abilities.</li>
-            <li>Developed organisational, leadership, and problem-solving skills.</li>
-            <li>Demonstrated professionalism, responsibility, and adaptability.</li>
-        </ul>
+        </div>
 
-    </div>
+      </div>
 
-</section>
+    </section>
 
-<section id="projects">
+    <!-- EXPERIENCE SECTION -->
 
-    <h2>Featured Projects</h2>
+    <section id="experience">
 
-    <p>
-        Practical projects that demonstrate my growth in web development,
-        programming, and technology.
-    </p>
+      <div class="container">
 
-    <div class="project">
+        <div class="section-heading">
+          <small>Professional Background</small>
+          <h2>Experience</h2>
+        </div>
 
-        <h3>Professional Portfolio Website</h3>
+        <div class="timeline">
 
-        <p>
-            Designed and developed a responsive personal portfolio website
-            to showcase my education, skills, professional background,
-            technical interests, and projects.
-        </p>
+          <div class="timeline-item">
 
-        <p>
-            <strong>Technologies:</strong>
-            HTML5, CSS3, GitHub, GitHub Pages
-        </p>
+            <h3>Teacher's Assistant</h3>
 
-        <p>
-            <strong>Key Achievements:</strong>
-        </p>
+            <div class="timeline-meta">
+              High School | 6-Month Contract
+            </div>
 
-        <ul style="padding-left:20px;color:var(--muted);">
-            <li>Created a fully responsive website.</li>
-            <li>Implemented modern UI and professional styling.</li>
-            <li>Published the website using GitHub Pages.</li>
-            <li>Applied version control using Git and GitHub.</li>
-        </ul>
+            <p>
+              Assisted educators with classroom activities
+              and supported students in their learning
+              and academic development.
+            </p>
 
-        <p>
-            <strong>Status:</strong> Live & Continuously Improving
-        </p>
+            <p>
+              Helped maintain an organised learning
+              environment while developing communication,
+              teamwork, patience and organisational skills.
+            </p>
 
-        <a
-            class="button"
-            href="https://tshepop0718.github.io/my-portfolio/"
-            target="_blank">
-            Live Website
-        </a>
+          </div>
 
-        <a
-            class="button"
-            href="https://github.com/tshepop0718/my-portfolio"
-            target="_blank">
-            Source Code
-        </a>
+        </div>
 
-    </div>
+      </div>
 
-</section>
+    </section>
 
-</main>
+    <!-- CONTACT SECTION -->
 
-<section id="contact">
+    <section class="contact" id="contact">
 
-    <h2>Let's Connect</h2>
+      <div class="container">
 
-    <p>
-        I am currently seeking opportunities to gain practical experience,
-        collaborate with professionals, and further develop my skills in
-        Computer Systems Engineering.
-    </p>
+        <div class="contact-content">
 
-    <div class="hero-buttons">
+          <div class="section-heading">
 
-        <a
-            class="button"
-            href="mailto:tshepop071@gmail.com">
-            Email Me
-        </a>
+            <small>Let's Connect</small>
 
-        <a
-            class="button button-secondary"
-            href="https://www.linkedin.com/in/tshepo-makhubela/"
-            target="_blank">
-            LinkedIn
-        </a>
+            <h2>Let's Build Something Great</h2>
 
-        <a
-            class="button button-secondary"
-            href="https://github.com/tshepop0718"
-            target="_blank">
-            GitHub
-        </a>
+          </div>
+
+          <p>
+            I am interested in connecting with technology
+            professionals, exploring internship opportunities
+            and learning from people in the industry.
+
+            Feel free to reach out. I would be happy
+            to connect.
+          </p>
+
+          <a href="mailto:tshepop071@gmail.com"
+             class="btn btn-primary">
+            Contact Me
+          </a>
+
+          <div class="social-links">
+
+            <a href="https://github.com/tshepop0718"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/tshepo-makhubela"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+
+            <a href="mailto:tshepop071@gmail.com">
+              Email
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © <span id="year">2026</span> Tshepo Peter.
+        All rights reserved.
+      </p>
+
+      <p>
+        Designed with purpose. Built for growth.
+      </p>
 
     </div>
 
-</section>
+  </footer>
 
-<footer>
-    <p>
-        © 2026 Tshepo Makhubela |
-        Computer Systems Engineering Student |
-        Tshwane University of Technology
-    </p>
-</footer>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
